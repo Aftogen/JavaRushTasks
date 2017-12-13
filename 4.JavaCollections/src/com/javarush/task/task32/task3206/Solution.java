@@ -21,11 +21,6 @@ import java.lang.reflect.Proxy;
 7. Метод getProxy должен работать согласно с условием.
 */
 public class Solution {
-    public Item getProxy(Class c, Class...interfaces){
-
-        return 
-    }
-
     public static void main(String[] args) {
         Solution solution = new Solution();
         test(solution.getProxy(Item.class));                        //true false false
@@ -35,6 +30,17 @@ public class Solution {
         test(solution.getProxy(Big.class));                         //true true false т.к. Big наследуется от Item
     }
 
+
+    public <T extends Item> T getProxy(Class<T> srcClass, Class... other) {
+        ItemInvocationHandler invocationHandler = new ItemInvocationHandler();
+        ClassLoader classLoader = srcClass.getClassLoader();
+
+        Class<?>[] interfaces = new Class[other.length + 1];
+        interfaces[0] = srcClass;
+        System.arraycopy(other, 0, interfaces, 1, other.length);
+
+        return (T) Proxy.newProxyInstance(classLoader, interfaces, invocationHandler);
+    }
 
     private static void test(Object proxy) {
         boolean isItem = proxy instanceof Item;
