@@ -35,7 +35,7 @@ import java.util.List;
 1. Вывод на экран должен соответствовать условию задачи.
 2. Класс Parking должен быть отмечен аннотацией @JsonTypeInfo с подходящим набором параметров.
 3. Класс Auto должен быть отмечен аннотацией @JsonTypeInfo с подходящим набором параметров.
-4. Класс Auto должен быть отмечен аннотацией @JsonSubTypes с подходящим набором параметров.
+4. Класс Auto должен быть отмечен аннотацaией @JsonSubTypes с подходящим набором параметров.
 */
 public class Solution {
     public static void main(String[] args) throws IOException {
