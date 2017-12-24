@@ -28,3 +28,10 @@ hs_err_pid*
 out
 JavaRushPlugin.properties
 .idea/
+.idea\
+.idea/workspace.xml
+.idea\workspace.xml
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
