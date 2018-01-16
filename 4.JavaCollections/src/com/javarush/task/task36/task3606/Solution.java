@@ -25,7 +25,6 @@ import java.util.*;
 public class Solution {
     private List<Class> hiddenClasses = new ArrayList<>();
     private String packageName;
-    HashMap
     public Solution(String packageName) {
         this.packageName = packageName;
     }
