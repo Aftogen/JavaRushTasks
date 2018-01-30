@@ -19,5 +19,7 @@ public class VeryComplexClass {
     }
 
     public static void main(String[] args) {
+        new VeryComplexClass().methodThrowsClassCastException();
+        //new VeryComplexClass().methodThrowsNullPointerException();
     }
 }
