@@ -29,6 +29,8 @@ package com.javarush.task.task38.task3804;
 6.	Фабрика должна иметь один метод и он должен быть статическим.
 */
 
+
+
 public class Solution {
     public static Class getFactoryClass() {
         return Factory.class;
@@ -37,6 +39,6 @@ public class Solution {
     public static void main(String[] args) throws Throwable {
         System.out.println(getFactoryClass());
         Throwable throwable = Factory.getThrowable(null);
-        throw throwable;
+
     }
 }
